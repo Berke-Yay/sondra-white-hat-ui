@@ -609,5 +609,10 @@ html {
         transform: translateY(-7px) rotate(-45deg);
     }
 
+    .pricing-container{
+        display: flex;
+        flex-direction: column;
+    }
+
 }
 
