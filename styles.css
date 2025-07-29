@@ -248,6 +248,151 @@ body {
     z-index: 2;
 }
 
+        /* Pricing Section */
+        .pricing-section {
+            padding: 8rem 2rem;
+            background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+        }
+
+        .pricing-container {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+        }
+
+        .pricing-card {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+            border: 1px solid #333333;
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .pricing-card:hover::before {
+            left: 100%;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            border-color: #3b82f6;
+            box-shadow: 0 25px 50px rgba(59, 130, 246, 0.2);
+        }
+
+        .pricing-card.enterprise {
+            border: 2px solid #3b82f6;
+            background: linear-gradient(135deg, #1e40af 0%, #2563eb 100%);
+            position: relative;
+        }
+
+        .pricing-header {
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .plan-title {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 1rem;
+        }
+
+        .price {
+            display: flex;
+            align-items: baseline;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .price-amount {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: #ffffff;
+            line-height: 1;
+        }
+
+        .price-period {
+            font-size: 1.2rem;
+            color: #9ca3af;
+            font-weight: 500;
+        }
+
+        .features-list {
+            list-style: none;
+            margin: 2rem 0;
+            text-align: left;
+            position: relative;
+            z-index: 2;
+        }
+
+        .features-list li {
+            color: #d1d5db;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .features-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #3b82f6;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .pricing-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+            border: 2px solid transparent;
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            margin-top: 1rem;
+        }
+
+        .pricing-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(59, 130, 246, 0.4);
+            border-color: #60a5fa;
+        }
+
+        .enterprise .pricing-button {
+            background: linear-gradient(135deg, #ffffff 0%, #f3f4f6 100%);
+            color: #1e40af;
+        }
+
+        .enterprise .pricing-button:hover {
+            background: linear-gradient(135deg, #f9fafb 0%, #e5e7eb 100%);
+            box-shadow: 0 15px 40px rgba(255, 255, 255, 0.2);
+        }
+
 /* FAQ Section */
 .faq-section {
     padding: 8rem 2rem;
